@@ -777,7 +777,7 @@ int WaitedForCurrentFrame(double, void* ctx) {
 }
 
 void WaitForNextFrameImpl(em_proxying_ctx* ctx, void*) {
-	emscripten_request_animation_frame(&WaitedForCurrentFrame, ctx);
+//	emscripten_request_animation_frame(&WaitedForCurrentFrame, ctx);
 }
 
 void WaitForNextFrame() {
@@ -788,12 +788,14 @@ void WaitForNextFrame() {
 		});
 	});
 #else
+	/*
 	auto defaultQueue = emscripten_proxy_get_system_queue();
 	emscripten_proxy_sync_with_ctx(
 		defaultQueue,
 		emscripten_main_browser_thread_id(),
 		&WaitForNextFrameImpl,
 		nullptr);
+	*/
 #endif
 }
 

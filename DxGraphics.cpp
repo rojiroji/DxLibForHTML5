@@ -31747,11 +31747,13 @@ extern int Graphics_Image_CreateGraph_UseGParam(
 		}
 		else
 		{
+#ifndef DX_NON_ASYNCLOAD
 			// 非同期読み込みカウントをインクリメント
 			if( ASyncThread )
 			{
 				IncASyncLoadCount( Param->GrHandle, -1 ) ;
 			}
+#endif // DX_NON_ASYNCLOAD
 		}
 	}
 	else

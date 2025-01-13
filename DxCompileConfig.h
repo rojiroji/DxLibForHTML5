@@ -151,7 +151,7 @@
 //#define DX_NON_PRINTF_DX
 
 // 非同期読み込みを無効にする場合は次のコメントを外して下さい
-//#define DX_NON_ASYNCLOAD
+#define DX_NON_ASYNCLOAD
 
 // ファイル保存機能を無効にする場合は次のコメントを外して下さい
 //#define DX_NON_SAVEFUNCTION
